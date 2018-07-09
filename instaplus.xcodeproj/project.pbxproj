@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1B42ECD9D25D1AC4F74B415 /* libPods-instaplusUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B67F8B686BF05408ADF3EC /* libPods-instaplusUITests.a */; };
 		A4DC674E20F413DA00A5D681 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC674D20F413DA00A5D681 /* AppDelegate.m */; };
-		A4DC675120F413DA00A5D681 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC675020F413DA00A5D681 /* ViewController.m */; };
 		A4DC675420F413DA00A5D681 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4DC675220F413DA00A5D681 /* Main.storyboard */; };
 		A4DC675620F413DB00A5D681 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DC675520F413DB00A5D681 /* Assets.xcassets */; };
 		A4DC675920F413DB00A5D681 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4DC675720F413DB00A5D681 /* LaunchScreen.storyboard */; };
 		A4DC675C20F413DB00A5D681 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC675B20F413DB00A5D681 /* main.m */; };
 		A4DC676620F413DB00A5D681 /* instaplusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC676520F413DB00A5D681 /* instaplusTests.m */; };
 		A4DC677120F413DB00A5D681 /* instaplusUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC677020F413DB00A5D681 /* instaplusUITests.m */; };
+		A4DC678120F418FE00A5D681 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC678020F418FE00A5D681 /* LoginViewController.m */; };
+		A4DC678420F41B2F00A5D681 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC678320F41B2F00A5D681 /* FeedViewController.m */; };
+		A68F1CC980CCA4AC7AFF65FE /* libPods-instaplusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ADC152535AC5AA5F3417D1 /* libPods-instaplusTests.a */; };
+		D3DF3678958C112C2FB91405 /* libPods-instaplus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D090C73B1F63C0A2160552A /* libPods-instaplus.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		288DB3C81C6634305635BD80 /* Pods-instaplusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instaplusUITests/Pods-instaplusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		38C88330451ED4CB6F31C77D /* Pods-instaplus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instaplus/Pods-instaplus.debug.xcconfig"; sourceTree = "<group>"; };
+		60959DAFB626DF9141AE3355 /* Pods-instaplusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-instaplusTests/Pods-instaplusTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D090C73B1F63C0A2160552A /* libPods-instaplus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instaplus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CDACF870719A295983DC2F /* Pods-instaplusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instaplusTests/Pods-instaplusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A396009FA53E9A51D4AC7713 /* Pods-instaplusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instaplusUITests/Pods-instaplusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4DC674920F413DA00A5D681 /* instaplus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaplus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DC674C20F413DA00A5D681 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4DC674D20F413DA00A5D681 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A4DC674F20F413DA00A5D681 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A4DC675020F413DA00A5D681 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A4DC675320F413DA00A5D681 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4DC675520F413DB00A5D681 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4DC675820F413DB00A5D681 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +59,13 @@
 		A4DC676C20F413DB00A5D681 /* instaplusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instaplusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DC677020F413DB00A5D681 /* instaplusUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = instaplusUITests.m; sourceTree = "<group>"; };
 		A4DC677220F413DB00A5D681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4DC677F20F418FE00A5D681 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A4DC678020F418FE00A5D681 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A4DC678220F41B2F00A5D681 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		A4DC678320F41B2F00A5D681 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		B0B67F8B686BF05408ADF3EC /* libPods-instaplusUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instaplusUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B965CC3E4373CAC9DB6DB412 /* Pods-instaplus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplus.release.xcconfig"; path = "Pods/Target Support Files/Pods-instaplus/Pods-instaplus.release.xcconfig"; sourceTree = "<group>"; };
+		D1ADC152535AC5AA5F3417D1 /* libPods-instaplusTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instaplusTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DF3678958C112C2FB91405 /* libPods-instaplus.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A68F1CC980CCA4AC7AFF65FE /* libPods-instaplusTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,19 +89,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B42ECD9D25D1AC4F74B415 /* libPods-instaplusUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7096FE35D038246FBCF69C15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D090C73B1F63C0A2160552A /* libPods-instaplus.a */,
+				D1ADC152535AC5AA5F3417D1 /* libPods-instaplusTests.a */,
+				B0B67F8B686BF05408ADF3EC /* libPods-instaplusUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4DC674020F413DA00A5D681 = {
 			isa = PBXGroup;
 			children = (
+				A4DC677E20F418F000A5D681 /* View Controllers */,
 				A4DC674B20F413DA00A5D681 /* instaplus */,
 				A4DC676420F413DB00A5D681 /* instaplusTests */,
 				A4DC676F20F413DB00A5D681 /* instaplusUITests */,
 				A4DC674A20F413DA00A5D681 /* Products */,
+				DB4629F04F6E6C3B6F314A21 /* Pods */,
+				7096FE35D038246FBCF69C15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +134,6 @@
 			children = (
 				A4DC674C20F413DA00A5D681 /* AppDelegate.h */,
 				A4DC674D20F413DA00A5D681 /* AppDelegate.m */,
-				A4DC674F20F413DA00A5D681 /* ViewController.h */,
-				A4DC675020F413DA00A5D681 /* ViewController.m */,
 				A4DC675220F413DA00A5D681 /* Main.storyboard */,
 				A4DC675520F413DB00A5D681 /* Assets.xcassets */,
 				A4DC675720F413DB00A5D681 /* LaunchScreen.storyboard */,
@@ -132,6 +161,30 @@
 			path = instaplusUITests;
 			sourceTree = "<group>";
 		};
+		A4DC677E20F418F000A5D681 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4DC677F20F418FE00A5D681 /* LoginViewController.h */,
+				A4DC678020F418FE00A5D681 /* LoginViewController.m */,
+				A4DC678220F41B2F00A5D681 /* FeedViewController.h */,
+				A4DC678320F41B2F00A5D681 /* FeedViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DB4629F04F6E6C3B6F314A21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38C88330451ED4CB6F31C77D /* Pods-instaplus.debug.xcconfig */,
+				B965CC3E4373CAC9DB6DB412 /* Pods-instaplus.release.xcconfig */,
+				74CDACF870719A295983DC2F /* Pods-instaplusTests.debug.xcconfig */,
+				60959DAFB626DF9141AE3355 /* Pods-instaplusTests.release.xcconfig */,
+				A396009FA53E9A51D4AC7713 /* Pods-instaplusUITests.debug.xcconfig */,
+				288DB3C81C6634305635BD80 /* Pods-instaplusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4DC677520F413DB00A5D681 /* Build configuration list for PBXNativeTarget "instaplus" */;
 			buildPhases = (
+				0F0298C34D714693D4A0AE56 /* [CP] Check Pods Manifest.lock */,
 				A4DC674520F413DA00A5D681 /* Sources */,
 				A4DC674620F413DA00A5D681 /* Frameworks */,
 				A4DC674720F413DA00A5D681 /* Resources */,
+				653030B7401C0AFAA0392CFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4DC677820F413DB00A5D681 /* Build configuration list for PBXNativeTarget "instaplusTests" */;
 			buildPhases = (
+				D2609E4DFA1B875546855E29 /* [CP] Check Pods Manifest.lock */,
 				A4DC675D20F413DB00A5D681 /* Sources */,
 				A4DC675E20F413DB00A5D681 /* Frameworks */,
 				A4DC675F20F413DB00A5D681 /* Resources */,
@@ -174,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4DC677B20F413DB00A5D681 /* Build configuration list for PBXNativeTarget "instaplusUITests" */;
 			buildPhases = (
+				3F3BB440C6151B3585EDEFE1 /* [CP] Check Pods Manifest.lock */,
 				A4DC676820F413DB00A5D681 /* Sources */,
 				A4DC676920F413DB00A5D681 /* Frameworks */,
 				A4DC676A20F413DB00A5D681 /* Resources */,
@@ -257,14 +314,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F0298C34D714693D4A0AE56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instaplus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F3BB440C6151B3585EDEFE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instaplusUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		653030B7401C0AFAA0392CFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-instaplus/Pods-instaplus-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-instaplus/Pods-instaplus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2609E4DFA1B875546855E29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instaplusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4DC674520F413DA00A5D681 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4DC675120F413DA00A5D681 /* ViewController.m in Sources */,
 				A4DC675C20F413DB00A5D681 /* main.m in Sources */,
 				A4DC674E20F413DA00A5D681 /* AppDelegate.m in Sources */,
+				A4DC678420F41B2F00A5D681 /* FeedViewController.m in Sources */,
+				A4DC678120F418FE00A5D681 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +564,7 @@
 		};
 		A4DC677620F413DB00A5D681 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C88330451ED4CB6F31C77D /* Pods-instaplus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +582,7 @@
 		};
 		A4DC677720F413DB00A5D681 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B965CC3E4373CAC9DB6DB412 /* Pods-instaplus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -465,6 +600,7 @@
 		};
 		A4DC677920F413DB00A5D681 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74CDACF870719A295983DC2F /* Pods-instaplusTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -484,6 +620,7 @@
 		};
 		A4DC677A20F413DB00A5D681 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60959DAFB626DF9141AE3355 /* Pods-instaplusTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +640,7 @@
 		};
 		A4DC677C20F413DB00A5D681 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A396009FA53E9A51D4AC7713 /* Pods-instaplusUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KV6X26527X;
@@ -521,6 +659,7 @@
 		};
 		A4DC677D20F413DB00A5D681 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288DB3C81C6634305635BD80 /* Pods-instaplusUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KV6X26527X;
