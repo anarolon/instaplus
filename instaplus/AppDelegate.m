@@ -25,7 +25,6 @@
     [Parse initializeWithConfiguration:configuration];
     
     PFUser *user = [PFUser currentUser];
-    /**
     if (user != nil) {
         NSLog(@"Welcome back %@ 😀", user.username);
         
@@ -35,8 +34,7 @@
         self.window.rootViewController = chatNavigationController;
         
     }
-    
-    */
+
     return YES;
 }
 
