@@ -28,6 +28,12 @@
     self.tableView.delegate = self;
     [self.tableView setRowHeight: 400];
     
+    
+    // Initialize a UIRefreshControl
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:refreshControl atIndex:0];
+    
     [self fetchPosts];
     
     [self.tableView reloadData];
@@ -98,6 +104,19 @@
         }
     }];
     
+}
+
+// Updates the tableView with the new data
+// Hides the RefreshControl
+- (void)beginRefresh:(UIRefreshControl *)refreshControl {
+    
+    [self fetchPosts];
+    
+    // Reload the tableView now that there is new data
+    [self.tableView reloadData];
+    
+    // Tell the refreshControl to stop spinning
+    [refreshControl endRefreshing];
 }
 
 /*
