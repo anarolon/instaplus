@@ -77,10 +77,44 @@
         <!--Feed View Controller-->
         <scene sceneID="p7G-VF-zge">
             <objects>
-                <viewController id="I1Z-0o-cTJ" customClass="FeedViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeFeed" id="I1Z-0o-cTJ" customClass="FeedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UfS-eZ-dgj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H75-xU-XlK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="366" id="BKb-mp-dPw" customClass="PostCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="366"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BKb-mp-dPw" id="Hql-0Q-1xd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="365.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="OXS-qz-i4E">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kb-LT-6Ma">
+                                                    <rect key="frame" x="15" y="323" width="244" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionText" destination="5Kb-LT-6Ma" id="kjY-Eo-4Mi"/>
+                                            <outlet property="postImageView" destination="OXS-qz-i4E" id="d3q-ET-ERa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vjf-hF-K7N"/>
                     </view>
@@ -91,11 +125,81 @@
                                 <action selector="onLogout:" destination="I1Z-0o-cTJ" id="jIM-50-C9e"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Compose" image="insta_camera_btn" id="Y8b-X5-KWU">
+                            <color key="tintColor" red="1" green="0.20069617307576426" blue="0.4323702804043974" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="onCompose:" destination="I1Z-0o-cTJ" id="MUu-oX-eiP"/>
+                                <segue destination="vBX-ez-cub" kind="presentation" identifier="Compose" id="y00-hk-O34"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="H75-xU-XlK" id="o6Z-gS-foH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8e-1T-P8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2172" y="115.59220389805098"/>
+        </scene>
+        <!--Compose View Controller-->
+        <scene sceneID="Uh2-i1-22z">
+            <objects>
+                <viewController id="qNx-54-z0Y" customClass="ComposeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jyV-AH-bjc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="KAt-K1-Hzd">
+                                <rect key="frame" x="16" y="90" width="127" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ImageToUpload">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MF8-KR-Aqy" appends="YES" id="2lR-Ka-dm4"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a description..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Zr-jm-1Zu">
+                                <rect key="frame" x="151" y="99" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ImageDescription"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hIa-um-tLh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vnT-wx-61h">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wM0-WD-RZk">
+                            <color key="tintColor" red="1" green="0.20069617307576426" blue="0.4323702804043974" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="onCancel:" destination="qNx-54-z0Y" id="dTM-81-JXD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="HFs-HA-R4z">
+                            <color key="tintColor" red="1" green="0.20069617307576426" blue="0.4323702804043974" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="onShare:" destination="qNx-54-z0Y" id="J9h-PW-Ezd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="composedCaption" destination="9Zr-jm-1Zu" id="9Rr-op-R3a"/>
+                        <outlet property="composedImage" destination="KAt-K1-Hzd" id="59g-jv-I0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dz4-Yd-lYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MF8-KR-Aqy">
+                    <connections>
+                        <action selector="onTapImage:" destination="qNx-54-z0Y" id="Cc7-dl-awt"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3976.8000000000002" y="115.59220389805098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bhz-Cv-6gG">
@@ -115,5 +219,27 @@
             </objects>
             <point key="canvasLocation" x="1232.8" y="115.59220389805098"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Crt-EH-WZN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vBX-ez-cub" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ShA-2V-KqD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qNx-54-z0Y" kind="relationship" relationship="rootViewController" id="cDM-O2-tR2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2c-K8-D55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3034" y="116"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="image_placeholder" width="375" height="375"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+    </resources>
 </document>

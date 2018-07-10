@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A1B42ECD9D25D1AC4F74B415 /* libPods-instaplusUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B67F8B686BF05408ADF3EC /* libPods-instaplusUITests.a */; };
+		A481D41220F45FC30019E3E3 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A481D41120F45FC30019E3E3 /* Post.m */; };
+		A481D41520F47A230019E3E3 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A481D41420F47A230019E3E3 /* PostCell.m */; };
 		A4DC674E20F413DA00A5D681 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC674D20F413DA00A5D681 /* AppDelegate.m */; };
 		A4DC675420F413DA00A5D681 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4DC675220F413DA00A5D681 /* Main.storyboard */; };
 		A4DC675620F413DB00A5D681 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DC675520F413DB00A5D681 /* Assets.xcassets */; };
@@ -17,6 +19,7 @@
 		A4DC677120F413DB00A5D681 /* instaplusUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC677020F413DB00A5D681 /* instaplusUITests.m */; };
 		A4DC678120F418FE00A5D681 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC678020F418FE00A5D681 /* LoginViewController.m */; };
 		A4DC678420F41B2F00A5D681 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC678320F41B2F00A5D681 /* FeedViewController.m */; };
+		A4DC678720F42D9200A5D681 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC678620F42D9200A5D681 /* ComposeViewController.m */; };
 		A68F1CC980CCA4AC7AFF65FE /* libPods-instaplusTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ADC152535AC5AA5F3417D1 /* libPods-instaplusTests.a */; };
 		D3DF3678958C112C2FB91405 /* libPods-instaplus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D090C73B1F63C0A2160552A /* libPods-instaplus.a */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,10 @@
 		6D090C73B1F63C0A2160552A /* libPods-instaplus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instaplus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CDACF870719A295983DC2F /* Pods-instaplusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instaplusTests/Pods-instaplusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A396009FA53E9A51D4AC7713 /* Pods-instaplusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-instaplusUITests/Pods-instaplusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A481D41020F45FC30019E3E3 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		A481D41120F45FC30019E3E3 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		A481D41320F47A230019E3E3 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
+		A481D41420F47A230019E3E3 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		A4DC674920F413DA00A5D681 /* instaplus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaplus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DC674C20F413DA00A5D681 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4DC674D20F413DA00A5D681 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +70,8 @@
 		A4DC678020F418FE00A5D681 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A4DC678220F41B2F00A5D681 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		A4DC678320F41B2F00A5D681 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		A4DC678520F42D9200A5D681 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		A4DC678620F42D9200A5D681 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		B0B67F8B686BF05408ADF3EC /* libPods-instaplusUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instaplusUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B965CC3E4373CAC9DB6DB412 /* Pods-instaplus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instaplus.release.xcconfig"; path = "Pods/Target Support Files/Pods-instaplus/Pods-instaplus.release.xcconfig"; sourceTree = "<group>"; };
 		D1ADC152535AC5AA5F3417D1 /* libPods-instaplusTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-instaplusTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,10 +115,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A481D41620F47A2C0019E3E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A481D41320F47A230019E3E3 /* PostCell.h */,
+				A481D41420F47A230019E3E3 /* PostCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A4DC674020F413DA00A5D681 = {
 			isa = PBXGroup;
 			children = (
-				A4DC677E20F418F000A5D681 /* View Controllers */,
+				A481D41620F47A2C0019E3E3 /* Views */,
+				A4DC678820F43BE900A5D681 /* Models */,
+				A4DC677E20F418F000A5D681 /* Controllers */,
 				A4DC674B20F413DA00A5D681 /* instaplus */,
 				A4DC676420F413DB00A5D681 /* instaplusTests */,
 				A4DC676F20F413DB00A5D681 /* instaplusUITests */,
@@ -161,15 +181,26 @@
 			path = instaplusUITests;
 			sourceTree = "<group>";
 		};
-		A4DC677E20F418F000A5D681 /* View Controllers */ = {
+		A4DC677E20F418F000A5D681 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				A4DC677F20F418FE00A5D681 /* LoginViewController.h */,
 				A4DC678020F418FE00A5D681 /* LoginViewController.m */,
 				A4DC678220F41B2F00A5D681 /* FeedViewController.h */,
 				A4DC678320F41B2F00A5D681 /* FeedViewController.m */,
+				A4DC678520F42D9200A5D681 /* ComposeViewController.h */,
+				A4DC678620F42D9200A5D681 /* ComposeViewController.m */,
 			);
-			path = "View Controllers";
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A4DC678820F43BE900A5D681 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A481D41020F45FC30019E3E3 /* Post.h */,
+				A481D41120F45FC30019E3E3 /* Post.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DB4629F04F6E6C3B6F314A21 /* Pods */ = {
@@ -395,8 +426,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4DC675C20F413DB00A5D681 /* main.m in Sources */,
+				A481D41220F45FC30019E3E3 /* Post.m in Sources */,
 				A4DC674E20F413DA00A5D681 /* AppDelegate.m in Sources */,
 				A4DC678420F41B2F00A5D681 /* FeedViewController.m in Sources */,
+				A481D41520F47A230019E3E3 /* PostCell.m in Sources */,
+				A4DC678720F42D9200A5D681 /* ComposeViewController.m in Sources */,
 				A4DC678120F418FE00A5D681 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

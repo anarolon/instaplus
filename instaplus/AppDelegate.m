@@ -20,6 +20,7 @@
     
     ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = @"instaplus";
+        configuration.clientKey = @"Diva";
         configuration.server = @"https://instaplus.herokuapp.com/parse";
     }];
     [Parse initializeWithConfiguration:configuration];
@@ -27,7 +28,6 @@
     PFUser *user = [PFUser currentUser];
     if (user != nil) {
         NSLog(@"Welcome back %@ 😀", user.username);
-        
         // Load Chat view controller and set as root view controller
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UIViewController *chatNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"FeedNavigationController"];
