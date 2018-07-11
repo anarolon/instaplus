@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "AppDelegate.h"
 #import "Post.h"
+#import "MBProgressHUD.h"
 
 @interface ComposeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -54,14 +55,18 @@
 // Share image
 - (IBAction)onShare:(id)sender {
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     if(self.composedImage != nil) {
         NSLog(@"Ready to Share Post");
         
         [Post postUserImage:self.composedImage.image withCaption:self.composedCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
             if(error != nil) {
                 NSLog(@"Unable to post: %@", error.localizedDescription);
+                [self alertAction:@"Image Upload Error" message:@"Couldn't upload image;"];
             } else {
                 NSLog(@"Successfully created post");
+                [MBProgressHUD showHUDAddedTo:self.view animated:NO];
                 [self dismissViewControllerAnimated:NO completion:nil];
             }
         }];

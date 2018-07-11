@@ -10,6 +10,7 @@ target 'instaplus' do
   pod 'Parse'
   pod 'DateTools'
   pod 'ParseUI'
+  pod 'MBProgressHUD'
 
   target 'instaplusTests' do
     inherit! :search_paths

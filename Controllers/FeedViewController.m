@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) NSArray *instaPosts;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (assign, nonatomic) BOOL isMoreDataLoading;
 
 @end
 
@@ -59,7 +60,6 @@
     cell.captionText.text = post.caption;
     cell.timestampText.text = [post.createdAt timeAgoSinceNow];
     
-    [cell refreshCell];
     return cell;
 }
 
@@ -120,6 +120,24 @@
     
     // Tell the refreshControl to stop spinning
     [refreshControl endRefreshing];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    // Handle scroll behavior
+    if(!self.isMoreDataLoading) {
+        self.isMoreDataLoading = YES;
+        
+        // Calculate the position of one screen length before the bottom of the results
+        int scrollViewContentHeight = self.tableView.contentSize.height;
+        int scrollOffsetThreshold = scrollViewContentHeight - self.tableView.bounds.size.height;
+        
+        // When the user has scrolled past the threshold, start requesting
+        if(scrollView.contentOffset.y > scrollOffsetThreshold && self.tableView.isDragging) {
+            self.isMoreDataLoading = true;
+            // Load more results
+            [self fetchPosts];
+        }
+    }
 }
 
 #pragma mark - Navigation

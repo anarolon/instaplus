@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *captionText;
 @property (weak, nonatomic) IBOutlet UILabel *timestamp;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 
 @end
 
@@ -24,6 +25,7 @@
     [self.postDetails.image getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
         self.imageView.image = [UIImage imageWithData:data];
     }];
+    self.usernameLabel.text = self.postDetails.author.username;
     self.captionText.text = self.postDetails.caption;
     self.timestamp.text = [self.postDetails.createdAt timeAgoSinceNow];
 }

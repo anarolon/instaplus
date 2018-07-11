@@ -22,9 +22,6 @@
 }
 
 - (void) refreshCell {
-    
-    self.postImageView.file = self.post.image;
-    [self.postImageView loadInBackground];
 }
 
 @end
