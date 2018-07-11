@@ -10,6 +10,7 @@
 		A1B42ECD9D25D1AC4F74B415 /* libPods-instaplusUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B67F8B686BF05408ADF3EC /* libPods-instaplusUITests.a */; };
 		A481D41220F45FC30019E3E3 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A481D41120F45FC30019E3E3 /* Post.m */; };
 		A481D41520F47A230019E3E3 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A481D41420F47A230019E3E3 /* PostCell.m */; };
+		A4908EEF20F561F400E23788 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4908EEE20F561F400E23788 /* DetailsViewController.m */; };
 		A4DC674E20F413DA00A5D681 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DC674D20F413DA00A5D681 /* AppDelegate.m */; };
 		A4DC675420F413DA00A5D681 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4DC675220F413DA00A5D681 /* Main.storyboard */; };
 		A4DC675620F413DB00A5D681 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DC675520F413DB00A5D681 /* Assets.xcassets */; };
@@ -52,6 +53,8 @@
 		A481D41120F45FC30019E3E3 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		A481D41320F47A230019E3E3 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		A481D41420F47A230019E3E3 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		A4908EED20F561F400E23788 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		A4908EEE20F561F400E23788 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		A4DC674920F413DA00A5D681 /* instaplus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instaplus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DC674C20F413DA00A5D681 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4DC674D20F413DA00A5D681 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				A4DC678320F41B2F00A5D681 /* FeedViewController.m */,
 				A4DC678520F42D9200A5D681 /* ComposeViewController.h */,
 				A4DC678620F42D9200A5D681 /* ComposeViewController.m */,
+				A4908EED20F561F400E23788 /* DetailsViewController.h */,
+				A4908EEE20F561F400E23788 /* DetailsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -389,11 +394,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-instaplus/Pods-instaplus-resources.sh",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
+				"${PODS_ROOT}/ParseUI/ParseUI/Resources/Localization/en.lproj",
+				"${PODS_ROOT}/ParseUI/ParseUI/Resources/Localization/fr.lproj",
+				"${PODS_ROOT}/ParseUI/ParseUI/Resources/Localization/pt-BR.lproj",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/fr.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pt-BR.lproj",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -432,6 +445,7 @@
 				A481D41520F47A230019E3E3 /* PostCell.m in Sources */,
 				A4DC678720F42D9200A5D681 /* ComposeViewController.m in Sources */,
 				A4DC678120F418FE00A5D681 /* LoginViewController.m in Sources */,
+				A4908EEF20F561F400E23788 /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

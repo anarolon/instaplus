@@ -8,6 +8,8 @@ target 'instaplus' do
   # Pods for instaplus
 
   pod 'Parse'
+  pod 'DateTools'
+  pod 'ParseUI'
 
   target 'instaplusTests' do
     inherit! :search_paths

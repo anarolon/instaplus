@@ -12,6 +12,8 @@
 #import "Parse.h"
 #import "PostCell.h"
 #import "Post.h"
+#import "DetailsViewController.h"
+#import "DateTools.h"
 
 @interface FeedViewController ()
 
@@ -26,17 +28,15 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    [self.tableView setRowHeight: 400];
+    [self.tableView setRowHeight: 450];
+    self.instaPosts = [[NSArray alloc] init];
     
+     [self fetchPosts];
     
     // Initialize a UIRefreshControl
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:refreshControl atIndex:0];
-    
-    [self fetchPosts];
-    
-    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,14 +52,14 @@
     PostCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"PostCell"];
     
     Post *post = self.instaPosts[indexPath.row];
-    [post.image getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
-        if(error != nil) {
-            
-        } else {
-            cell.postImageView.image = [UIImage imageWithData:data];
-            cell.captionText.text = post[@"caption"];
-        }
-    }];
+    
+    cell.userText.text = post.author.username;
+    cell.postImageView.file = post.image;
+    [cell.postImageView loadInBackground];
+    cell.captionText.text = post.caption;
+    cell.timestampText.text = [post.createdAt timeAgoSinceNow];
+    
+    [cell refreshCell];
     return cell;
 }
 
@@ -89,6 +89,8 @@
 
 - (void) fetchPosts {
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query orderByDescending:@"createdAt"];
+    [query includeKey:@"author"];
     query.limit = 20;
     
     // fetch data asynchronously
@@ -98,11 +100,12 @@
             NSLog(@"Successfully retrieved posts");
             self.instaPosts = posts;
             NSLog(@"Posts: %@", self.instaPosts);
-            [self.tableView reloadData];
         } else {
             NSLog(@"%@", error.localizedDescription);
         }
+        [self.tableView reloadData];
     }];
+    
     
 }
 
@@ -119,14 +122,20 @@
     [refreshControl endRefreshing];
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"Details"]) {
+        PostCell *tappedCell = sender;
+        NSIndexPath *indexPath =  [self.tableView indexPathForCell:tappedCell];
+        Post *post = self.instaPosts[indexPath.row];
+        DetailsViewController *detailsViewController = [segue destinationViewController];
+        detailsViewController.postDetails = post;
+        NSLog(@"Tapping on a post");
+        [tappedCell setSelected:NO];
+    }
 }
-*/
 
 @end

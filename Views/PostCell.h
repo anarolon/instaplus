@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Post.h"
+#import "ParseUI.h"
 
 @interface PostCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *postImageView;
+@property (strong, nonatomic) Post *post;
+@property (weak, nonatomic) IBOutlet PFImageView *postImageView;
 @property (weak, nonatomic) IBOutlet UILabel *captionText;
+@property (weak, nonatomic) IBOutlet UILabel *timestampText;
+@property (weak, nonatomic) IBOutlet UILabel *userText;
+
+- (void) refreshCell;
 
 @end
