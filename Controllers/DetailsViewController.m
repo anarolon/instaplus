@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *captionText;
 @property (weak, nonatomic) IBOutlet UILabel *timestamp;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *likeLabel;
 
 @end
 
@@ -28,6 +29,9 @@
     self.usernameLabel.text = self.postDetails.author.username;
     self.captionText.text = self.postDetails.caption;
     self.timestamp.text = [self.postDetails.createdAt timeAgoSinceNow];
+    if(self.postDetails.likeCount.integerValue != 0) {
+        self.likeLabel.text = [NSString stringWithFormat:@"%li", (long) self.postDetails.likeCount.integerValue];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

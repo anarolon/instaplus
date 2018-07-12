@@ -29,7 +29,7 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    [self.tableView setRowHeight: 450];
+    [self.tableView setRowHeight: 500];
     self.instaPosts = [[NSArray alloc] init];
     
      [self fetchPosts];
@@ -59,7 +59,11 @@
     [cell.postImageView loadInBackground];
     cell.captionText.text = post.caption;
     cell.timestampText.text = [post.createdAt timeAgoSinceNow];
-    
+    if(post.likeCount.integerValue != 0) {
+        cell.likeCount.text = [NSString stringWithFormat:@"%li", (long) post.likeCount.integerValue];
+    } else {
+        cell.likeCount.text = @"";
+    }
     return cell;
 }
 
@@ -105,8 +109,6 @@
         }
         [self.tableView reloadData];
     }];
-    
-    
 }
 
 // Updates the tableView with the new data

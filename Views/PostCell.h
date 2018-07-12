@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *captionText;
 @property (weak, nonatomic) IBOutlet UILabel *timestampText;
 @property (weak, nonatomic) IBOutlet UILabel *userText;
+@property (weak, nonatomic) IBOutlet UILabel *likeCount;
 
 - (void) refreshCell;
 
