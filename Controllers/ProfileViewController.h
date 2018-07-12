@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EditProfileViewController.h"
 
-@interface ProfileViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+
+@interface ProfileViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, EditProfileViewControllerDelegate>
 
 @end

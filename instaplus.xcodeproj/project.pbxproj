@@ -10,6 +10,7 @@
 		A1B42ECD9D25D1AC4F74B415 /* libPods-instaplusUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B67F8B686BF05408ADF3EC /* libPods-instaplusUITests.a */; };
 		A481D41220F45FC30019E3E3 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = A481D41120F45FC30019E3E3 /* Post.m */; };
 		A481D41520F47A230019E3E3 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A481D41420F47A230019E3E3 /* PostCell.m */; };
+		A484A9B220F7C05A0003EA38 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A484A9B120F7C05A0003EA38 /* EditProfileViewController.m */; };
 		A4908EEF20F561F400E23788 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4908EEE20F561F400E23788 /* DetailsViewController.m */; };
 		A4C2997420F6AA2700AEF0E5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C2997320F6AA2700AEF0E5 /* ProfileViewController.m */; };
 		A4C2997720F6CF0D00AEF0E5 /* PostCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C2997620F6CF0D00AEF0E5 /* PostCollectionCell.m */; };
@@ -55,6 +56,8 @@
 		A481D41120F45FC30019E3E3 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		A481D41320F47A230019E3E3 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		A481D41420F47A230019E3E3 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		A484A9B020F7C05A0003EA38 /* EditProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		A484A9B120F7C05A0003EA38 /* EditProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		A4908EED20F561F400E23788 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		A4908EEE20F561F400E23788 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		A4C2997220F6AA2700AEF0E5 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				A4908EEE20F561F400E23788 /* DetailsViewController.m */,
 				A4C2997220F6AA2700AEF0E5 /* ProfileViewController.h */,
 				A4C2997320F6AA2700AEF0E5 /* ProfileViewController.m */,
+				A484A9B020F7C05A0003EA38 /* EditProfileViewController.h */,
+				A484A9B120F7C05A0003EA38 /* EditProfileViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4DC675C20F413DB00A5D681 /* main.m in Sources */,
+				A484A9B220F7C05A0003EA38 /* EditProfileViewController.m in Sources */,
 				A4C2997420F6AA2700AEF0E5 /* ProfileViewController.m in Sources */,
 				A481D41220F45FC30019E3E3 /* Post.m in Sources */,
 				A4DC674E20F413DA00A5D681 /* AppDelegate.m in Sources */,

@@ -59,6 +59,8 @@
     [cell.postImageView loadInBackground];
     cell.captionText.text = post.caption;
     cell.timestampText.text = [post.createdAt timeAgoSinceNow];
+    cell.profilePic.file = post.author[@"profileImage"];
+    [cell.profilePic loadInBackground];
     if(post.likeCount.integerValue != 0) {
         cell.likeCount.text = [NSString stringWithFormat:@"%li", (long) post.likeCount.integerValue];
     } else {
@@ -84,6 +86,11 @@
         }
 
     }];
+}
+
+- (IBAction)onFavorite:(id)sender {
+    
+    
 }
 
 - (IBAction)onCompose:(id)sender {
@@ -124,6 +131,7 @@
     [refreshControl endRefreshing];
 }
 
+// TODO
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     // Handle scroll behavior
     if(!self.isMoreDataLoading) {

@@ -16,6 +16,9 @@
 @property (strong, nonatomic) NSArray *instaPosts;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *postCount;
+@property (weak, nonatomic) IBOutlet PFImageView *profilePicture;
+
 
 @end
 
@@ -25,6 +28,8 @@
     [super viewDidLoad];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    self.profilePicture.file = ([PFUser currentUser])[@"profileImage"];
+    [self.profilePicture loadInBackground];
     
     [self fetchPosts];
     
@@ -35,8 +40,7 @@
     
     CGFloat posterPerLine = 3;
     CGFloat itemWidth = (self.collectionView.frame.size.width - layout.minimumInteritemSpacing * (posterPerLine - 1))/posterPerLine;
-    CGFloat itemHeight = itemWidth * 1.5;
-    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    layout.itemSize = CGSizeMake(itemWidth, itemWidth);
     
     
 }
@@ -71,17 +75,20 @@
     }];
 }
 
+- (void) editProfileViewController: (EditProfileViewController *)controller editedProfileWithInfo: (NSString *)name username: (NSString *) newUsername biography: (NSString *) bio profilePic:(UIImage *)image{
+    self.profilePicture.image = image;
+}
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UINavigationController *navigationC = [segue destinationViewController];
+    EditProfileViewController *editProfileVC = (EditProfileViewController *) navigationC.topViewController;
+    editProfileVC.delegate = self;
 }
-*/
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     PostCollectionCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"PostCollectionCell" forIndexPath:indexPath];
@@ -90,6 +97,7 @@
     cell.imagePost.file = post.image;
     [cell.imagePost loadInBackground];
     self.usernameLabel.text = [PFUser currentUser].username;
+    self.postCount.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.instaPosts.count];
     
     return cell;
     

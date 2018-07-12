@@ -8,6 +8,7 @@
 
 #import "DetailsViewController.h"
 #import "DateTools.h"
+#import "ParseUI.h"
 
 @interface DetailsViewController ()
 
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timestamp;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeLabel;
+@property (weak, nonatomic) IBOutlet PFImageView *profilePic;
 
 @end
 
@@ -32,6 +34,8 @@
     if(self.postDetails.likeCount.integerValue != 0) {
         self.likeLabel.text = [NSString stringWithFormat:@"%li", (long) self.postDetails.likeCount.integerValue];
     }
+    self.profilePic.file = self.postDetails.author[@"profileImage"];
+    [self.profilePic loadInBackground];
 }
 
 - (void)didReceiveMemoryWarning {

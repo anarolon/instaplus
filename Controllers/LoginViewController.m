@@ -27,6 +27,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)alertAction:(NSString *)title message:(NSString *)message {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    // create an OK action
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // handle response here.
+    }];
+    
+    // add the OK action to the alert controller
+    [alert addAction:okAction];
+    
+    [self presentViewController:alert animated:YES completion:^{
+        // optional code for what happens after the alert controller has finished presenting
+    }];
+    
+}
+
 - (IBAction)onSignUp:(id)sender {
     PFUser *newUser = [PFUser object];
     
@@ -38,10 +56,10 @@
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
+            [self alertAction:@"Error" message:error.localizedDescription];
         } else {
             NSLog(@"User registered successfully");
-            
-            // manually segue to logged in view
+            [self alertAction:@"Awesome" message: @"User registered successfully"];
         }
     }];
     
@@ -54,6 +72,7 @@
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
+            [self alertAction:@"Error" message:error.localizedDescription];
         } else {
             NSLog(@"User logged in successfully");
             // display view controller that needs to shown after successful login
