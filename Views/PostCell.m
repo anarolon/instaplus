@@ -22,6 +22,16 @@
 }
 
 - (void) refreshCell {
+    
 }
+
+- (IBAction)onFavoriteTap:(id)sender {
+    
+    UIButton *button = sender;
+    
+    
+    
+}
+
 
 @end

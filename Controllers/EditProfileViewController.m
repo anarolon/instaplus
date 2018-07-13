@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameLabel;
 @property (weak, nonatomic) IBOutlet UITextField *usernameLabel;
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -30,6 +31,11 @@
     self.usernameLabel.text = self.currUser[@"username"];
     self.bioTextView.text = self.currUser[@"bio"];
     [self.imageView loadInBackground];
+    
+    CGFloat contentWidth = self.scrollView.bounds.size.width;
+    CGFloat contentHeight = self.scrollView.bounds.size.height * 1.3;
+    self.scrollView.contentSize = CGSizeMake(contentWidth, contentHeight);
+    
 }
 
 - (void)didReceiveMemoryWarning {

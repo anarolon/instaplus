@@ -58,8 +58,6 @@
     [query orderByDescending:@"createdAt"];
     [query includeKey:@"author"];
     
-    NSLog(@"%@", [PFUser currentUser].username);
-    
     [query whereKey:@"author" equalTo:[PFUser currentUser]];
     
     // fetch data asynchronously

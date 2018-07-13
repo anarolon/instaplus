@@ -62,9 +62,9 @@
     cell.profilePic.file = post.author[@"profileImage"];
     [cell.profilePic loadInBackground];
     if(post.likeCount.integerValue != 0) {
-        cell.likeCount.text = [NSString stringWithFormat:@"%li", (long) post.likeCount.integerValue];
+        cell.likeCount.text = [NSString stringWithFormat:@"%li likes", (long) post.likeCount.integerValue];
     } else {
-        cell.likeCount.text = @"";
+        cell.likeCount.text = @"0 likes";
     }
     return cell;
 }
@@ -149,6 +149,7 @@
         }
     }
 }
+
 
 #pragma mark - Navigation
 

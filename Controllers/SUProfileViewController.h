@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parse.h"
 
-@interface SUProfileViewController : UIViewController
+@interface SUProfileViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (strong, nonatomic) PFUser *user;
 
 @end
