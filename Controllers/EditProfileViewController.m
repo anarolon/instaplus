@@ -25,7 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.currUser = [PFUser currentUser];
-    self.imageView.file = ([PFUser currentUser])[@"profileImage"];
+    self.imageView.file = self.currUser[@"profileImage"];
+    self.nameLabel.text = self.currUser[@"name"];
+    self.usernameLabel.text = self.currUser[@"username"];
+    self.bioTextView.text = self.currUser[@"bio"];
     [self.imageView loadInBackground];
 }
 
@@ -89,8 +92,11 @@
     
     PFFile *profilePic = [PFFile fileWithName:@"profilePic" data:UIImagePNGRepresentation(self.imageView.image)];
     self.currUser[@"profileImage"] = profilePic;
+    self.currUser[@"username"] = self.usernameLabel.text;
+    self.currUser[@"name"] = self.nameLabel.text;
+    self.currUser[@"bio"] = self.bioTextView.text;
     [self.currUser saveInBackground];
-    [self.delegate editProfileViewController:self editedProfileWithInfo:nil username: nil biography:nil profilePic:self.imageView.image];
+    [self.delegate editProfileViewController:self editedProfileWithInfo:self.nameLabel.text username:self.usernameLabel.text biography:self.bioTextView.text profilePic:self.imageView.image];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

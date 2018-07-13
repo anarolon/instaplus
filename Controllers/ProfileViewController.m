@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *postCount;
 @property (weak, nonatomic) IBOutlet PFImageView *profilePicture;
+@property (weak, nonatomic) IBOutlet UILabel *bioLabel;
 
 
 @end
@@ -29,6 +30,7 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.profilePicture.file = ([PFUser currentUser])[@"profileImage"];
+    self.bioLabel.text =([PFUser currentUser])[@"bio"];
     [self.profilePicture loadInBackground];
     
     [self fetchPosts];
@@ -77,6 +79,8 @@
 
 - (void) editProfileViewController: (EditProfileViewController *)controller editedProfileWithInfo: (NSString *)name username: (NSString *) newUsername biography: (NSString *) bio profilePic:(UIImage *)image{
     self.profilePicture.image = image;
+    self.usernameLabel.text = name;
+    self.bioLabel.text = bio;
 }
 
 
