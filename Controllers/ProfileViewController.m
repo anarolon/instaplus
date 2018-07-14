@@ -77,6 +77,7 @@
 
 - (void) editProfileViewController: (EditProfileViewController *)controller editedProfileWithInfo: (NSString *)name username: (NSString *) newUsername biography: (NSString *) bio profilePic:(UIImage *)image{
     self.profilePicture.image = image;
+    [self.profilePicture.file saveInBackground];
     self.usernameLabel.text = name;
     self.bioLabel.text = bio;
 }

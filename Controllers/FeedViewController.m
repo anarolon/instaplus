@@ -54,6 +54,8 @@
     
     Post *post = self.instaPosts[indexPath.row];
     
+    cell.post = post;
+    [cell.post saveInBackground];
     cell.userText.text = post.author.username;
     cell.postImageView.file = post.image;
     [cell.postImageView loadInBackground];
@@ -88,10 +90,6 @@
     }];
 }
 
-- (IBAction)onFavorite:(id)sender {
-    
-    
-}
 
 - (IBAction)onCompose:(id)sender {
     [self performSegueWithIdentifier:@"Compose" sender:self];
@@ -149,8 +147,6 @@
         }
     }
 }
-
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

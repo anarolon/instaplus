@@ -20,6 +20,6 @@
 @property (weak, nonatomic) IBOutlet PFImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UILabel *likeCount;
 
-- (void) refreshCell;
+- (void) refreshCell: (NSInteger *) count;
 
 @end
